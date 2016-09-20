@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/01.css">
+	</head>
+	<body>
+		
+		<script>
+			
+		var imagen;
+
+		function loro(){
+			alert("guaro");
+		} 
+
+		function loro1(){
+			imagen=document.getElementsByTagName("img")[0];
+			imagen.addEventListener("mouseover",crecer,false);
+			imagen.addEventListener("mouseout",menguar,false);
+			imagen.addEventListener("click",loro,false);
+		}
+
+		function crecer(){
+
+			
+			imagen.width=500;
+			imagen.height=400;
+		}
+
+		function menguar(){
+
+			imagen.width=300;
+			imagen.height=204;
+
+		}
+
+		window.onload=loro1;
+
+		</script>
+		<!-- forma menos recomendada onmouseover=pasar raton por ensima -->
+		
+		<p onClick="loro()"></p>
+		<div><img src="img/loro.jpg" alt=""></div>
+
+
+	</body>
+</html>
